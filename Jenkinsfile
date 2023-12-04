@@ -35,6 +35,7 @@ pipeline {
             echo 'Build and test successful! Add additional steps as needed.'
         }
         failure {
+            junit '**/build/test-results/test/*.xml' // Collect JUnit test results
             echo 'Build or test failed. Take necessary actions.'
         }
     }
