@@ -32,7 +32,7 @@ pipeline {
     post {
         success {
             junit '**/build/test-results/test/*.xml' // Collect JUnit test results
-            echo 'Build and test successful! Add additional steps as needed.'
+            echo 'Build and test successful!'
         }
         failure {
             echo 'Build or test failed. Take necessary actions.'
